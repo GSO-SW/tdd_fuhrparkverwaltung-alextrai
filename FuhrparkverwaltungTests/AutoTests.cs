@@ -22,6 +22,14 @@ namespace FuhrparkverwaltungTests
         }
 
         [TestMethod]
-
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        {
+        //Arrange
+        int kilometerstand = 10;
+        Auto b = new Auto(kilometerstand);
+        int streckeInKilometern = -1;
+        //Act
+        a.Fahren(streckeInKilometern);
+    }
     }
 }
