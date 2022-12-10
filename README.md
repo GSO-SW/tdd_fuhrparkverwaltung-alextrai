@@ -40,7 +40,7 @@ Beantworten Sie auf Basis der obigen Beschreibung diese Fragen:
 
 2.	Wie heißt die zu testende Klasse?
 
-   Antwort: TestprojektTests
+   Antwort: Auto
 
 3.	Sind die Namenskonventionen eingehalten? Falls nein: Welche Verbesserung schlagen Sie vor?
 
@@ -50,8 +50,15 @@ Beantworten Sie auf Basis der obigen Beschreibung diese Fragen:
 
 4.	Wie viele Tests würden im Testexplorer angezeigt werden? (Begründen Sie Ihre Antwort!)
 
-   Antwort:Einer ,weil nur ein Test hinzugefügt wurde
+   Antwort: 0, [Testmethod] ist ausgeklammert
 
 5.	Wie würde, ausgehend von diesem Testfall, ein UML-Klassendiagramm für die zu testende Klasse aussehen? (Gerne dürfen Sie hier eine Tabelle einfügen, z.B. mit dem [MarkdownTableGenerator](https://www.tablesgenerator.com/markdown_tables)
 
    Antwort:
+
+| Auto                                 |
+|--------------------------------------|
+| - kilometerstand : int               |
+| + Auto (kilometerstand : int)        |
+| + Fahren (streckeInKilometern : int) |
+| + Kilometerstand {get; } : int       |
