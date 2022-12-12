@@ -15,9 +15,7 @@ namespace FuhrparkverwaltungTests
         {
             //Arrange
             int kilometerstand = 0;
-            double tankinhalt = 0;
-            double verbrauchPro100Kilometern = 0;
-            Auto a = new Auto(kilometerstand, tankinhalt, verbrauchPro100Kilometern);
+            Auto a = new Auto(kilometerstand);
             int streckeInKilometern = 50;
 
             //Act
@@ -33,30 +31,28 @@ namespace FuhrparkverwaltungTests
         {
         //Arrange
         int kilometerstand = 10;
-            double tankinhalt = 0;
-            double verbrauchPro100Kilometern = 0;
-            Auto b = new Auto(kilometerstand,tankinhalt,verbrauchPro100Kilometern);
+        Auto a = new Auto(kilometerstand);
         int streckeInKilometern = -1;
         //Act
-        b.Fahren(streckeInKilometern);
+        a.Fahren(streckeInKilometern);
         }
 
         [TestMethod]
 
-        public void Tank_VerbrauchPro100Kilometern()
+        public void Fahren_VerbrauchtTankinhalt()
         {
             //Arrange
             int kilometerstand = 0;
             double tankinhalt = 10;
             double verbrauchPro100Kilometern = 5.7;
-            Auto c = new Auto(kilometerstand,tankinhalt, verbrauchPro100Kilometern);
+            Auto a = new Auto(kilometerstand,tankinhalt, verbrauchPro100Kilometern);
 
 
             //Act
-            double neuerTankinhalt = c.Tank(tankinhalt, verbrauchPro100Kilometern);
+            a.Fahren(100);
 
             //Assert
-            Assert.AreEqual(tankinhalt - verbrauchPro100Kilometern, neuerTankinhalt);
+            Assert.AreEqual(4,3,a.Tankinhalt);
 
         }
     }

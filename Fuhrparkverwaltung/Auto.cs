@@ -10,13 +10,11 @@ namespace Fuhrparkverwaltung
     {
         private int kilometerstand;
         private double tankinhalt;
-        private double verbrauchPro100Kilometern;
+        private double verbrauchPro100Kilometern; 
 
-        public Auto(int kilometerstand, double tankinhalt, double verbrauchPro100Kilometern)
+        public Auto(int kilometerstand)
         {
             this.kilometerstand = kilometerstand;
-            this.tankinhalt = tankinhalt;
-            this.verbrauchPro100Kilometern = verbrauchPro100Kilometern;
         }
 
         public void Fahren(int streckeInKilometer)
@@ -30,12 +28,6 @@ namespace Fuhrparkverwaltung
                 throw new ArgumentOutOfRangeException("Negativ Strecke nicht möglich");
             }
             
-        }
-
-        public double Tank(double tankinhalt,double verbrauchPro100Kilometern)
-        {
-            tankinhalt = tankinhalt - verbrauchPro100Kilometern;
-            return tankinhalt;
         }
 
         public int Kilometerstand
